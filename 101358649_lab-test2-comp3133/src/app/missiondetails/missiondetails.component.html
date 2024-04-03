@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+<button (click)="goBack()">Go back</button>
+<div *ngIf="selectedMission">
+    
+<h2>Mission - {{selectedMission.mission_name}}</h2>
+<p>Name - {{selectedMission.mission_name}}</p>
+
+<p>Launch year: {{selectedMission.launch_year}}</p>
+<h3>Launch Details</h3>
+<p> {{selectedMission.details}}</p>
+<img [src]="selectedMission.mission_patch_small" alt="mission patch">
+
+
+
+</div>

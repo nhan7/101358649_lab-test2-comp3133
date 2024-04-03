@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+<input type="text" placeholder="search by year" [(ngModel)]="searchYear" (input)="searchMissions()">
+<div *ngFor="let mission of missions" (click)="showMissionDetails(mission)">
+    <h2>{{mission.mission_name}}</h2>
+    <p>Launch Year: {{mission.launch_year}}</p>
+    <p>Details: {{mission.details}}</p>
+    <img [src]="mission.mission_patch_small" alt="mission patch">
+
+</div>
